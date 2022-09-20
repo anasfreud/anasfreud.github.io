@@ -1,0 +1,125 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #8D99AE;
+    margin: 0;
+  }
+  
+  header {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #2B2D42;
+    color: white;
+  }
+  
+  nav {
+    color:white;
+    background-color: #2B2D42;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: #2B2D42;
+    color: white;
+  }
+  
+  .container {
+    border-style: solid;
+    border-color: #2B2D42;
+    border-radius: 1%;
+    background-color: #EDF2F4;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 10px;
+  }
+  
+  #logo {
+    float: left;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -32px 20px 0 0;
+  }
+  
+  .title {
+    margin-top: 42px;
+    font-size: 30px;
+  }
+  
+  .centered {  
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 20px auto;
+  }
+  
+  a#nav {
+    color: white;
+    display: inline;
+    margin-right: 50px;
+    text-decoration: none;
+  } 
+  
+  a {
+    text-decoration: none;
+    color: rgb(116, 101, 170);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #2B2D42;
+  }
+  
+  tr#row:nth-child(even) {
+    background-color: #cbd5e7;
+  }
+  
+  td, th {
+    padding: 10px;
+    border: 1px solid grey;
+  }
+  
+  input#text {
+    box-sizing: border-box;
+    width: 350px;
+    margin: 10px 0 10px 0;
+    padding: 12px 20px;
+  }
+  
+  input#radio {
+    box-sizing: border-box;
+    margin: 10px 10px 10px 0;
+  }
+  
+  input#submit {
+    height: 30px;
+    width: 100px;
+    margin: 10px 10px 10px 0;
+    color:white;
+    background-color: #2B2D42;
+  }
+  
+  input#submit:hover {
+    background-color: #8D99AE;
+  }
+  
+  select {
+    width: 350px;
+    height: 50px;
+    margin: 10px 0 10px 0;
+  }
+  
+  textarea {
+    width: 350px;
+    height: 100px;
+    margin: 10px 0 10px 0;
+  }

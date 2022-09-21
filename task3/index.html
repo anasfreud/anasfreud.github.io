@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+   <!-- header -->
+   <header>
+      <div class="header">
+        <img id="logo" src="logo.jpg" alt="logo">
+        <p id="title">Мой сайт</p>
+      </div>
+  </header>
+
+  <!-- navigation -->
+  <nav>
+    <a href="#links">Ссылки</a>
+    <a href="#table">Таблица</a>
+    <a href="#form">Форма</a>
+  </nav>
+
+  <!-- content -->
+  <div class="content">
+    
+    <!-- links -->
+    <div class="card" id="links">
+      <ol>
+        <li><a href="http://example.com">Абсолютная гиперссылка на главную страницу</a></li>
+        <li><a href="https://example.com">Абсолютная гиперссылка на главную страницу в протоколе https</a></li>
+        <li><a href="ftp://example.com/file.txt">Ссылка на файл на сервере ftp без авторизации</a></li>
+        <li><a href="ftp://user:password@example.com/file.txt">Ссылка на файл на сервере ftp с авторизацией</a></li>
+        <li><a href="http://example.com/page#about">Ссылка на фрагмент страницы другого сайта</a></li>
+        <li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="http://example.com/store?id=123&product=123">Ссылка с двумя параметрами</a></li>
+        <li>
+          <ul>
+            <li><a href="https://www.kubsu.ru/ru/university" title="kubsu.ru/university">Университет</a></li>
+            <li><a href="https://www.kubsu.ru/ru/education" title="kubsu.ru/education">Образование</a></li>
+            <li><a href="https://www.kubsu.ru/ru/science" title="kubsu.ru/science">Наука и инновации</a></li>
+            <li><a href="https://www.kubsu.ru/ru/abiturient" title="kubsu.ru/abiturient">Абитуриентам</a></li>
+            <li><a href="https://www.kubsu.ru/ru/studlife" title="kubsu.ru/studlife">Студентам </a></li>
+          </ul>
+        </li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="https://www.kubsu.ru" rel="nofollow">Ссылка с запретом на переход</a></li>
+        <li><!--noindex--><a href="https://www.kubsu.ru">Ссылка с запретом на индексацию</a><!--/noindex--></li>
+        <li><p>Контекстная <a href="https://www.kubsu.ru">ссылка</a> в тексте абзаца</p></li>
+    
+        <li>
+          <a href="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/a1ea1a79459efaa.png">
+            <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/a1ea1a79459efaa.png"
+            alt="cat" width="100"/>
+          </a>
+        </li>
+    
+        <li>
+          <img src="https://miro.medium.com/max/3800/1*-i9M1D3PQv8VdZ9BgL90Kg.png" 
+            usemap="#map" width="190" height="110" alt="sqaure and circle">
+    
+          <map name="map">
+            <area shape="rect" coords="30,30,75,75" 
+              href="https://www.kubsu.ru" alt="rect area">
+              <area shape="circle" coords="140,50,20"
+              href="https://www.kubsu.ru" alt="circle area">
+          </map>
+        </li>
+    
+        <li><a href="news.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="about/contacts.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href="../news.html"> Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../news.html"> Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+        <li><a href="/"> Сокращенная ссылка на главную</a></li>
+        <li><a href="/catalog/books.html"> Сокращенная ссылка на внутреннюю</a></li>
+      </ol>
+    </div>
+    
+    <!-- table -->
+    <div class="card" id="table">
+      <table>
+        <tr>
+          <th rowspan="2">Элемент</th>
+          <th colspan="2">Описание</th>
+        </tr>
+        <tr>
+          <th>Тег</th>
+          <th>Отображение</th>
+        </tr>
+        <tr id="row">
+          <td>Параграф</td>
+          <td>p</td>
+          <td>Блочный</td>
+        </tr>
+        <tr id="row">
+          <td>Картинка </td>
+          <td>img</td>
+          <td>Строчный</td>
+        </tr>
+        <tr id="row">
+          <td>Фрагмент текста </td>
+          <td>span</td>
+          <td>Строчный</td>
+        </tr>
+        <tr id="row">
+          <td>Таблица </td>
+          <td>table</td>
+          <td>Табличный</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- form -->
+    <div class="card" id="form">
+      <form action="/" method="POST">
+    
+        <label>Имя:<br><input name="name"></label><br>
+        <label>E-mail:<br><input name="email" type="email" placeholder="example@gmail.com"></label><br>
+        <label>Дата рождения:<br><input name="birthday" value="2022-09-13" type="date"></label><br>
+    
+        Пол:<br>
+        <label><input type="radio" name="gender" value="Male">Мужской</label>
+        <label><input type="radio" name="gender" value="Female" checked="checked">Женский</label><br>
+    
+        Количество конечностей:<br>
+        <label><input id="radio" type="radio" checked="checked" name="limbs" value="2">4</label>
+        <label><input id="radio" type="radio" name="limbs" value="4">6</label>
+        <label><input id="radio" type="radio" name="limbs" value="8">8</label><br>
+        
+        Сверхспособности:<br>
+        <select name="superpower[]" multiple="multiple">
+          <option value="Бессмертие">Бессмертие</option>
+          <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+          <option value="Левитация">Левитация</option>
+        </select><br>
+        
+        Биография:<br>
+        <label><textarea name="biography"></textarea></label><br>
+    
+        <label><input type="checkbox" name="contract"> С контрактом ознакомлен (-а)</label><br>
+        <input type="submit" id="submit" value="Отправить">
+    
+      </form>
+    </div>
+  </div>
+
+
+   <!-- footer -->
+   <footer>
+    <p>
+      © Fedorova Anastasia, 2022
+    </p>
+  </footer>
+
+</body>
+
+</html>

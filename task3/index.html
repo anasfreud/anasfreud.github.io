@@ -118,33 +118,50 @@
     <!-- form -->
     <div class="card" id="form">
       <form action="/" method="POST">
-    
-        <label>Имя:<br><input name="name"></label><br>
-        <label>E-mail:<br><input name="email" type="email" placeholder="example@gmail.com"></label><br>
-        <label>Дата рождения:<br><input name="birthday" value="2022-09-13" type="date"></label><br>
-    
-        Пол:<br>
-        <label><input type="radio" name="gender" value="Male">Мужской</label>
-        <label><input type="radio" name="gender" value="Female" checked="checked">Женский</label><br>
-    
-        Количество конечностей:<br>
-        <label><input id="radio" type="radio" checked="checked" name="limbs" value="2">4</label>
-        <label><input id="radio" type="radio" name="limbs" value="4">6</label>
-        <label><input id="radio" type="radio" name="limbs" value="8">8</label><br>
+        <div class="row-block">
+
+          <div class="block">
+            <label><p>Имя:</p><input name="name" id="rect"></label><br>
+            <label><p>E-mail:</p><input name="email" id="rect" type="email" placeholder="example@gmail.com"></label><br>
+            <label><p>Дата рождения:</p><input name="birthday" id="rect" value="2022-09-13" type="date"></label><br>
+          </div>
+          
+          <div class="block">
+            <p>Пол:</p>
+            <label><input type="radio" name="gender" value="Male">Мужской</label>
+            <label><input type="radio" name="gender" value="Female" checked="checked">Женский</label><br>
+            
+            <p>Количество конечностей:</p>
+            <label><input id="radio" type="radio" checked="checked" name="limbs" value="2">4</label>
+            <label><input id="radio" type="radio" name="limbs" value="4">6</label>
+            <label><input id="radio" type="radio" name="limbs" value="8">8</label><br>
+          </div>
+        </div>
         
-        Сверхспособности:<br>
-        <select name="superpower[]" multiple="multiple">
-          <option value="Бессмертие">Бессмертие</option>
-          <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
-          <option value="Левитация">Левитация</option>
-        </select><br>
+        <div class="row-block">
+
+          <div class="block" id="superpower">
+
+            <p>Сверхспособности:</p>
+            <select name="superpower[]" multiple="multiple">
+              <option value="Бессмертие">Бессмертие</option>
+              <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+              <option value="Левитация">Левитация</option>
+            </select><br>
+          </div>
+          
+          <div class="block" id="bio">
+            <p>Расскажите о себе:</p>
+            <label><textarea id="bio" name="biography"></textarea></label><br>
+            
+          </div>
+        </div>
         
-        Биография:<br>
-        <label><textarea name="biography"></textarea></label><br>
-    
-        <label><input type="checkbox" name="contract"> С контрактом ознакомлен (-а)</label><br>
-        <input type="submit" id="submit" value="Отправить">
-    
+        <div class="block">
+          <label><input type="checkbox" name="contract"> С контрактом ознакомлен(-а)</label><br>
+          <input type="submit" value="Отправить">
+        </div>
+          
       </form>
     </div>
   </div>

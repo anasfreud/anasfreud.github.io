@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background-color: #8D99AE;
+}
+
+header {
+  background-color: #2B2D42;  
+  color: white;
+}
+
+#logo {
+  flex-basis: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+#title {
+  font-size: 30px;
+}
+
+nav {
+  background-color: #2B2D42;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  color: rgb(116, 101, 170);;
+}
+
+.content, nav, header div {
+  max-width: 960px;
+}
+
+footer {
+  height: 80px;
+  background-color: #2B2D42;
+  color: white;
+}
+
+footer {
+  background-color: #2B2D42;  
+  color: white;
+  height: 100px;
+}
+
+
+@media screen and (min-width: 768px) {
+  #logo {
+    flex-basis: 100px;
+    height: 100px;
+  }
+  #title {
+    font-size: 40px;
+  }
+  nav {
+    flex-flow: row nowrap;
+  }
+}

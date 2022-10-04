@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+   <!-- header -->
+   <header>
+      <div class="d-flex flex-row justify-content-start align-items-center w-100 mx-auto mb-4 p-3">    
+        <img class="me-4" id="logo" src="logo.jpg" alt="logo">
+        <p id="title">Мой сайт</p>
+      </div>
+  </header>
+
+   <!-- navigation -->
+   <nav class="d-flex flex-column flex-md-row justify-content-center align-items-left p-3 mx-1 mx-md-auto rounded">
+    <a class="me-5 mb-2 mb-md-0" href="#links">Ссылки</a>
+    <a class="me-5 mb-2 mb-md-0" href="#table">Таблица</a>
+    <a class="me-5 mb-2 mb-md-0" href="#form">Форма</a>
+  </nav>
+
+
+  <div class="content row gy-3 mx-1 mx-md-auto mt-2">
+    <!-- links -->
+    <div class="col-12 p-0 card text-bg-light" id="links">
+      <div class="card-header">
+        <h4>Links</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <div class="row">
+            <div class="col">
+              <ol>
+                <li><a href="http://example.com">Абсолютная гиперссылка на главную страницу</a></li>
+                <li><a href="https://example.com">Абсолютная гиперссылка на главную страницу в протоколе https</a></li>
+                <li><a href="ftp://example.com/file.txt">Ссылка на файл на сервере ftp без авторизации</a></li>
+                <li><a href="ftp://user:password@example.com/file.txt">Ссылка на файл на сервере ftp с авторизацией</a></li>
+                <li><a href="http://example.com/page#about">Ссылка на фрагмент страницы другого сайта</a></li>
+                <li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="http://example.com/store?id=123&product=123">Ссылка с двумя параметрами</a></li>
+                <li>
+                  <ul>
+                    <li><a href="https://www.kubsu.ru/ru/university" title="kubsu.ru/university">Университет</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/education" title="kubsu.ru/education">Образование</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/science" title="kubsu.ru/science">Наука и инновации</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/abiturient" title="kubsu.ru/abiturient">Абитуриентам</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/studlife" title="kubsu.ru/studlife">Студентам </a></li>
+                  </ul>
+                </li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a href="https://www.kubsu.ru" rel="nofollow">Ссылка с запретом на переход</a></li>
+              </ol>
+            </div>
+            <div class="col">
+              <ol start="12">
+                <li><!--noindex--><a href="https://www.kubsu.ru">Ссылка с запретом на индексацию</a><!--/noindex--></li>
+                <li><p>Контекстная <a href="https://www.kubsu.ru">ссылка</a> в тексте абзаца</p></li>
+            
+                <li>
+                  <a href="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/a1ea1a79459efaa.png">
+                    <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/a1ea1a79459efaa.png"
+                    alt="cat" width="100"/>
+                  </a>
+                </li>
+            
+                <li>
+                  <img src="https://miro.medium.com/max/3800/1*-i9M1D3PQv8VdZ9BgL90Kg.png" 
+                    usemap="#map" width="190" height="110" alt="sqaure and circle">
+            
+                  <map name="map">
+                    <area shape="rect" coords="30,30,75,75" 
+                      href="https://www.kubsu.ru" alt="rect area">
+                      <area shape="circle" coords="140,50,20"
+                      href="https://www.kubsu.ru" alt="circle area">
+                  </map>
+                </li>
+            
+                <li><a href="news.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="about/contacts.html">Относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../news.html"> Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                <li><a href="../../news.html"> Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+                <li><a href="/"> Сокращенная ссылка на главную</a></li>
+                <li><a href="/catalog/books.html"> Сокращенная ссылка на внутреннюю</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- table -->
+    <div class="col-md-12 p-0 card text-bg-light" id="table">
+      <div class="card-header">
+        <h4>Table</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <table class="table table-striped">
+            <tr>
+              <th rowspan="2">Элемент</th>
+              <th colspan="2">Описание</th>
+            </tr>
+            <tr>
+              <th>Тег</th>
+              <th>Отображение</th>
+            </tr>
+            <tr>
+              <td>Параграф</td>
+              <td>p</td>
+              <td>Блочный</td>
+            </tr>
+            <tr>
+              <td>Картинка </td>
+              <td>img</td>
+              <td>Строчный</td>
+            </tr>
+            <tr>
+              <td>Фрагмент текста </td>
+              <td>span</td>
+              <td>Строчный</td>
+            </tr>
+            <tr>
+              <td>Таблица </td>
+              <td>table</td>
+              <td>Табличный</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- form -->
+    <div class="col-md-12 p-0 card text-bg-light" id="form">
+      <div class="card-header">
+        <h4>Form</h4>
+      </div>
+      <div class="card-body">
+        <div class="card-text">
+          <form action="/" method="POST">
+
+            <div class="row mb-2">
+              <div class="col-md-8 mb-4 mb-md-0">
+                <label for="name" class="form-label">Имя</label>
+                <input type="text" class="form-control" id="name" name="name">
+
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email">
+                
+                <label for="birthday" class="form-label">Дата рождения:</label> <br>
+                <input type="date" id="birthday" name="birthday" value="2022-09-13">
+                
+              </div>
+              
+              <div class="col-md-4">
+                <p>Пол:</p>
+                <input class="form-check-input" checked="checked" type="radio" name="gender" id="gender-male">
+                <label class="form-check-label me-2" for="gender-male">Мужской</label>
+                <input class="form-check-input" type="radio" name="gender" id="gender-female">
+                <label class="form-check-label" for="gender-female">Женский</label>
+                
+                <p class="mt-3">Количество конечностей:</p>
+                <input class="form-check-input" checked="checked" type="radio" name="limbs" id="limbs">
+                <label class="form-check-label me-2" for="limbs">2</label>
+                <input class="form-check-input" type="radio" name="limbs" id="limbs">
+                <label class="form-check-label me-2" for="limbs">4</label>
+                <input class="form-check-input" type="radio" name="limbs" id="limbs">
+                <label class="form-check-label me-2" for="limbs">6</label>
+                
+              </div>
+            </div>
+            
+            <div class="row mb-2 mt-4">
+    
+              <div class="col-md-4" id="superpower">
+    
+                <p>Сверхспособности:</p>
+                <select class="form-select" name="superpower[]" multiple="multiple">
+                  <option value="Бессмертие">Бессмертие</option>
+                  <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+                  <option value="Левитация">Левитация</option>
+                </select><br>
+              </div>
+              
+              <div class="col-md-8">
+                <p>Расскажите о себе:</p>
+                <textarea class="form-control" name="biography" id="biography" style="min-height: 120px"></textarea>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div>
+                <input class="form-check-input" type="checkbox" id="contract" name="contract">
+                <label class="form-check-label" for="contract">С контрактом ознакомлен(-а)</label>
+              </div>
+
+              <input class="btn btn-primary mt-3" type="submit" value="Отправить">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-5 p-3">
+    <p>
+      © Fedorova Anastasia, 2022
+    </p>
+  </footer>
+
+
+
+</body>
+
+</html>

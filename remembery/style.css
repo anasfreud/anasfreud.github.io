@@ -272,7 +272,7 @@ button#create {
 
 @font-face {
   font-family: "Montserrat"; 
-  src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); 
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
 } 

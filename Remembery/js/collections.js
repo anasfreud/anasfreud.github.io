@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createCollection(title, description) {
     const collection = document.createElement('div');
-    collection.classList.add('collection');
+    collection.classList.add('collection', 'panel');
     collection.innerHTML = `
       <div class="title">${title}</div>
       <div class="description">${description}</div>

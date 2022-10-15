@@ -1,8 +1,28 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: #F9E6CA;
+  background-color: #E9ECF8;
   font-family: "Montserrat";
+}
+
+.primary {
+  color: white;
+  background-color: #8366FD;
+}
+
+.secondary {
+  color: white;
+  background-color: #323232;
+}
+
+.panel {
+  border-radius: 32px;
+  background-color: white;
+  border-color: #F2F3FA;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 32px;
+  box-shadow: 0px 0px 44px -8px rgba(105, 60, 218, 0.18);
 }
 
 nav {
@@ -13,6 +33,7 @@ nav {
 nav a {
   text-decoration: none;
   color: inherit;
+  margin: 10px;
 }
 
 nav a:hover {
@@ -20,50 +41,46 @@ nav a:hover {
 }
 
 nav .menu-active {
-  color: #FFA06B;
-  margin: 10px;
+  color: #8366FD;
 }
 
 nav .menu-inactive {
   color: #323232;
-  margin: 10px;
 }
+
 
 button {
   user-select: none;
 }
 
+
 button#create {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-  border: none;
-  background-color: #323232;
-  color: white;
-  font-size: 30px;
+  font-size: 35px;
 }
+
 
 .collections {
   max-width: 1500px;
 }
 
 .collection {
-  text-align: center;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
+  text-align: center;
+  flex-basis: 380px;
+  height: 450px;
   margin: 20px;
   padding: 30px 15px;
-  width: 450px;
-  height: 450px;
-  background-color: #FFF6E5;
-  border-radius: 32px;
 }
 
 .collection .title {
   margin-bottom: 50px;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .collection .description {
@@ -93,24 +110,33 @@ button#create {
   border-radius: 44px;
   padding: 10px;
   min-width: 80px;
+  transition-duration: .3s;
+}
+
+.button-dark:hover {
+  background-color: #494949;
 }
 
 .button-light {
-  background-color: #FFA06B;
-  color: 23232;
+  background-color: #8366FD;
+  color: white;
   border: none;
   border-radius: 44px;
   padding: 10px;
   min-width: 80px;
+  transition-duration: .3s;
 }
 
+.button-light:hover {
+  background-color: #987eff;
+}
 
+/* editor */
 
 .editor {
-  background-color: #FFF6E5;
-  border-radius: 40px;
+  background-color: white;
+  border-radius: 32px;
   max-width: 1000px;
-  height: 650px;
   padding: 35px;
   margin: 50px auto;
 
@@ -119,9 +145,14 @@ button#create {
 }
 
 .editor input, .editor textarea {
-  background-color: rgb(248, 247, 247);
+  background-color: #F2F3FA;
   border: none;
   padding: 10px 20px;
+  transition-duration: 0.1s;
+}
+
+.editor input:focus, .editor textarea:focus {
+  outline: 3px solid #8366FD;
 }
 
 .editor .head button {
@@ -133,25 +164,36 @@ button#create {
   width: 400px;
   border-radius: 52px;
   flex-basis: 60px;
-  margin-bottom: 25px;
   font-size: 1.3em;
 }
 
 .editor .head textarea#description {
+  margin-top: 25px;
   flex-basis: 150px;
   width: 500px;
   resize: none;
   border-radius: 20px;
 }
 
-.editor .items {
-  overflow: auto;
+.editor .head #warning {
+  color: rgb(245, 67, 67);
+}
+
+.editor .items-area {
+  position: relative;
   border-style: solid;
-  border-color: #FFA06B;
+  border-color: #8366FD;
   border-radius: 20px;
+  height: 500px;
+  padding: 10px;
+}
+
+.editor .items {
+  padding: 20px 10px;
+  padding-left: 20px;
+  overflow: auto;
   background-color: white;
-  height: 400px;
-  padding: 20px;
+  height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -168,13 +210,31 @@ button#create {
 .editor .items .item input {
   margin-right: 20px;
   border-radius: 10px;
+  width: 300px;
+  transition-duration: .1s;
 }
 
 .editor button#add {
-  width: 50px;
-  height: 80px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50зч;
+  min-width: 60px;
+  height: 60px;
   font-size: 25px;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ececec;
+  border-radius: 20px;
+}
+
+/* quiz */
 
 .action-panel {
   text-align: center;

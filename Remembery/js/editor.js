@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         addBtn = buttons[2],
         deleteBtn = buttons[3],
         titleInput = document.querySelector('#title'),
-        descriptionInput = document.querySelector('#description');
+        descriptionInput = document.querySelector('#description'),
+        warning = document.querySelector('#warning');
         
 
         
@@ -31,15 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // show all items
   fetchItems();
 
-
-  titleInput.addEventListener('focusout', () => {
-    console.log(isTitleUnique(titleInput.value));
-  });
-
   saveBtn.addEventListener('click', () => {
     
     if (!isTitleUnique(titleInput.value)) {
-      console.log('Title must be unique');
+      warning.textContent = 'Title must be unique';
       return;
     }
 

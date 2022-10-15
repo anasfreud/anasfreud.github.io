@@ -12,14 +12,15 @@
 <body>
   <nav class="d-flex flex-row flex-nowrap justify-content-center align-items-center">
     <div class="menu-inactive"><a href="about.html">About</a></div>
-    <div class="menu-active"><a href="/">Dashboard</a></div>
+    <div class="menu-active"><a href="index.html">Dashboard</a></div>
   </nav>
 
-  <div class="editor">
+  <div class="editor panel">
     <div class="head mb-4 d-flex flex-row flex-nowrap justify-content-between align-items-center">
       
       <div class="d-flex flex-column justify-content-start align-items-start">
         <input id="title" type="text">
+        <div class="mx-3" id="warning"></div>
         <textarea id="description"></textarea>
       </div>
       <div class="buttons d-flex flex-row flex-grow-1 justify-content-end">
@@ -27,17 +28,21 @@
         <button class="mx-3 button-dark">Cancel</button>
       </div>
     </div>
-    
-    <button class="button-dark mx-3 mb-2" id="add">+</button>
-    <div class="items">
-      <!-- <div class="card">
-        <input type="text">
-        <input type="text">
-      </div> -->
+
+    <div class="items-area">
+      <div class="items">
+        <!-- <div class="card">
+          <input type="text">
+          <input type="text">
+        </div> -->
+      </div>
+      <button class="button-dark mx-3 mb-2" id="add">+</button>
     </div>
   </div>
 
-  <button id="delete">Delete</button>
+  <div class=" d-flex flex-row justify-content-center mb-5">
+    <button class="button-dark py-3 px-5" id="delete">Delete this collection</button>
+  </div>
 
 
 </body>

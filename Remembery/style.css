@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #F9E6CA;
+  font-family: "Montserrat";
+}
+
+nav {
+  height: 100px;
+  font-size: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  color: inherit;
+}
+
+nav .menu-active {
+  color: #FFA06B;
+  margin: 10px;
+}
+
+nav .menu-inactive {
+  color: #323232;
+  margin: 10px;
+}
+
+button {
+  user-select: none;
+}
+
+button#create {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: none;
+  background-color: #323232;
+  color: white;
+  font-size: 30px;
+}
+
+.collections {
+  max-width: 1500px;
+}
+
+.collection {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+  padding: 30px 15px;
+  width: 450px;
+  height: 450px;
+  background-color: #FFF6E5;
+  border-radius: 32px;
+}
+
+.collection .title {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.collection .description {
+  color: #868686;
+  font-size: 20px;
+}
+
+.collection .buttons {
+  margin: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: end;
+  flex-grow: 1;
+  align-self: stretch;
+  justify-content: space-around;
+}
+
+.collection .buttons button {
+  flex-basis: 130px;
+  height: 50px;
+}
+
+.button-dark {
+  background-color: #323232;
+  color: white;
+  border: none;
+  border-radius: 44px;
+  padding: 10px;
+  min-width: 80px;
+}
+
+.button-light {
+  background-color: #FFA06B;
+  color: 23232;
+  border: none;
+  border-radius: 44px;
+  padding: 10px;
+  min-width: 80px;
+}
+
+
+
+.editor {
+  background-color: #FFF6E5;
+  border-radius: 40px;
+  max-width: 1000px;
+  height: 650px;
+  padding: 35px;
+  margin: 50px auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.editor input, .editor textarea {
+  background-color: rgb(248, 247, 247);
+  border: none;
+  padding: 10px 20px;
+}
+
+.editor .head button {
+  flex-basis: 125px;
+  height: 45px;
+}
+
+.editor .head input#title {
+  width: 400px;
+  border-radius: 52px;
+  flex-basis: 60px;
+  margin-bottom: 25px;
+  font-size: 1.3em;
+}
+
+.editor .head textarea#description {
+  flex-basis: 150px;
+  width: 500px;
+  resize: none;
+  border-radius: 20px;
+}
+
+.editor .items {
+  overflow: auto;
+  border-style: solid;
+  border-color: #FFA06B;
+  border-radius: 20px;
+  background-color: white;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.editor .items .item {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.editor .items .item input {
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.editor button#add {
+  width: 50px;
+  height: 80px;
+  font-size: 25px;
+}
+
+.action-panel {
+  text-align: center;
+  background-color: #FFF6E5;
+  width: 500px;
+  height: 300px;
+  margin: 200px auto;
+  border-radius: 25px;
+}
+
+.card-text {
+  font-size: 2em;
+  padding-top: 80px;
+  margin-bottom: 100px
+}
+
+
+@font-face {
+  font-family: "Montserrat"; 
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 

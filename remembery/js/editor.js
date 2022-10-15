@@ -1,12 +1,11 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('button'),
-        cards = document.querySelector('.items'),
-        saveBtn = buttons[0],
-        backBtn = buttons[1],
-        addBtn = buttons[2],
-        deleteBtn = buttons[3],
+  const cards = document.querySelector('.items'),
+        saveBtn = document.querySelector('#save'),
+        backBtn = document.querySelector('#cancel'),
+        addBtn = document.querySelector('#add'),
+        deleteBtn = document.querySelector('#delete'),
         titleInput = document.querySelector('#title'),
         descriptionInput = document.querySelector('#description'),
         warning = document.querySelector('#warning');
@@ -35,16 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
   saveBtn.addEventListener('click', () => {
     
     if (!isTitleUnique(titleInput.value)) {
+      location.href = '#title';
       warning.textContent = 'Title must be unique';
       return;
     }
 
     saveCollection();
-    location.href = "index.html";
+    location.href = 'index.html';
   });
 
   backBtn.addEventListener('click', () => {
-    location.href = "index.html";
+    location.href = 'index.html';
   });
 
   addBtn.addEventListener('click', () => {
@@ -69,9 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function addItem(key, value) {
     const card = document.createElement('div');
     card.classList.add('item');
-    card.innerHTML += ` <input type="text" value="${key}">
+    card.innerHTML += `<div class="d-flex flex-row align-items-center my-3">
+    <div class="d-flex flex-md-row flex-column flex-nowrap align-items-center">
+      <input class="mb-2 mb-md-0" type="text" value="${key}">
       <input type="text" value="${value}">
-      <button class="button-dark">Delete</button>
+    </div>
+    <button class="delete-item"><img src="images/cross.png"></button>
+  </div>
     `;
     cards.append(card);
 

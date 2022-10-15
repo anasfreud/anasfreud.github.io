@@ -15,30 +15,46 @@
     <div class="menu-active"><a href="index.html">Dashboard</a></div>
   </nav>
 
-  <div class="editor panel">
-    <div class="head mb-4 d-flex flex-row flex-nowrap justify-content-between align-items-center">
+  <div class="panel editor p-2 p-md-4 mx-auto mt-3 mb-5">
+    <!-- <div class="mb-4 d-flex flex-column flex-nowrap justify-content-between align-items-center">
       
-      <div class="d-flex flex-column justify-content-start align-items-start">
-        <input id="title" type="text">
-        <div class="mx-3" id="warning"></div>
-        <textarea id="description"></textarea>
-      </div>
-      <div class="buttons d-flex flex-row flex-grow-1 justify-content-end">
-        <button class="mx-3 button-light">Save</button>
-        <button class="mx-3 button-dark">Cancel</button>
-      </div>
+      
+    </div> -->
+    
+    <!-- <div class="d-flex flex-column justify-content-start align-items-start" style="width: 100%;">
+    </div> -->
+    
+    <div class="d-flex flex-column head">
+      <input id="title" type="text">
+      <div class="mx-3" id="warning"></div>
+      <textarea class="my-3" id="description"></textarea>
     </div>
 
-    <div class="items-area">
+    <div class="items-area d-flex flex-column mb-4">
       <div class="items">
-        <!-- <div class="card">
-          <input type="text">
-          <input type="text">
+
+        <!-- <div class="d-flex flex-row align-items-center">
+          <div class="d-flex flex-md-row flex-column flex-nowrap align-items-center">
+            <input class="mb-2 mb-md-0" type="text" value="${key}">
+            <input type="text" value="${value}">
+          </div>
+          <button class="delete-item"><img src="images/cross.png"></button>
         </div> -->
-      </div>
-      <button class="button-dark mx-3 mb-2" id="add">+</button>
+      
+        
+        
+
+      </div>  
+      <button class="button-dark button-rounded align-self-center mx-3 mt-2" id="add">+</button>
     </div>
+
+    <div class="my-3 d-flex flex-row justify-content-center buttons">
+      <button id="save" class="mx-3 button-light">Save</button>
+      <button id="cancel" class="mx-3 button-dark">Cancel</button>
+    </div>
+
   </div>
+
 
   <div class=" d-flex flex-row justify-content-center mb-5">
     <button class="button-dark py-3 px-5" id="delete">Delete this collection</button>

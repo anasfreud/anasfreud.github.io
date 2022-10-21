@@ -235,13 +235,23 @@ button#create {
 
 /* quiz */
 
+.action-panel-wrapper {
+  perspective: 400px;
+}
 .action-panel {
   text-align: center;
-  background-color: #FFF6E5;
-  width: 500px;
+  background-color: white;
+  width: 200px;
   height: 300px;
-  margin: 200px auto;
+  margin: 0 auto;
   border-radius: 25px;
+  /* transform: rotateY(180deg); */
+  /* animation: turn .3s ease-in-out infinite; */
+}
+
+@keyframes turn {
+  /* 0% {transform: rotateY(0deg);}; */
+  100% {transform: rotateY(180deg);};
 }
 
 .card-text {
@@ -249,6 +259,8 @@ button#create {
   padding-top: 80px;
   margin-bottom: 100px
 }
+
+
 
 
 @media screen and (min-width: 768px) {
@@ -260,6 +272,7 @@ button#create {
     width: 500px;
   }
 }
+
 @media screen and (min-width: 1024px) {
  
   .editor button#add {
@@ -272,7 +285,7 @@ button#create {
 
 @font-face {
   font-family: "Montserrat"; 
-  src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); 
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
 } 

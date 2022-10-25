@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let reg = /\D/;
   btn.addEventListener('click', () => {
     if (reg.test(priceInput.value) || reg.test(countInput.value)) {
-      total.textContent = 'Incorrect format';
+      total.textContent = 'Неверный формат!';
     } else {
       total.textContent = +priceInput.value * +countInput.value;
     }

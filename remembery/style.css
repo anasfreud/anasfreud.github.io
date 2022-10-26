@@ -103,7 +103,6 @@ button#create {
   border: none;
   border-radius: 44px;
   padding: 10px;
-  /* min-width: 80px; */
   transition-duration: .3s;
 }
 
@@ -117,7 +116,6 @@ button#create {
   border: none;
   border-radius: 44px;
   padding: 10px;
-  /* min-width: 80px; */
   transition-duration: .3s;
 }
 
@@ -131,10 +129,6 @@ button#create {
   background-color: white;
   border-radius: 32px;
   max-width: 1000px;
-  /* padding: 10px; */
-  /* padding: 35px; */
-  /* margin: 50px auto; */
-  /* margin-top: 20px; */
   display: flex;
   flex-flow: column nowrap;
 }
@@ -162,10 +156,7 @@ button#create {
 }
 
 .editor textarea#description {
-  /* margin-top: 25px;
-  margin-bottom: 25px; */
   flex-basis: 200px;
-  /* width: 500px; */
   width: 100%;
   resize: none;
   border-radius: 20px;
@@ -235,13 +226,13 @@ button#create {
 
 /* quiz */
 
-.card-wrapper {
+.item-card-wrapper {
   perspective: 1000px;
   width: 400px;
 }
 
 
-.card-wrapper .card {
+.item-card-wrapper .item-card {
   width: inherit;
   height: 250px;
 
@@ -254,7 +245,7 @@ button#create {
   border-color: #8366FD;
   background-color: white;
   
-  transition-duration: .6s;
+  transition-duration: .45s;
   transform-style: preserve-3d; 
 }
 
@@ -286,7 +277,7 @@ button#create {
   font-size: 2.5em;
 }
 
-.card-wrapper button {
+.item-card-wrapper button {
   width: 150px;
 }
  

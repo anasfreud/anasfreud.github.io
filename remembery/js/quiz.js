@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const front = document.querySelector('.front div'),
         back = document.querySelector('.back div'),
-        card = document.querySelector('.card'),
+        card = document.querySelector('.item-card'),
         buttons = document.querySelectorAll('button'),
         turnBtn = buttons[0],
         nextBtn = buttons[1];

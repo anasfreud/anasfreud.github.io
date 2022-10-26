@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nextBtn.addEventListener('click', () => {
     currentItem++;
     if (currentItem < items.length) {
+      card.classList.toggle('turn');
       setText(items[currentItem].key, items[currentItem].value);
     } else {
       endQuiz();

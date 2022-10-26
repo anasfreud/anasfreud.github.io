@@ -42,11 +42,9 @@ nav .menu-inactive {
   color: #323232;
 }
 
-
 button {
   user-select: none;
 }
-
 
 button#create {
   width: 85px;
@@ -54,7 +52,6 @@ button#create {
   border-radius: 50%;
   font-size: 35px;
 }
-
 
 .collections {
   max-width: 1500px;
@@ -123,6 +120,7 @@ button#create {
   background-color: #987eff;
 }
 
+
 /* editor */
 
 .editor {
@@ -162,12 +160,10 @@ button#create {
   border-radius: 20px;
 }
 
-
 .editor .buttons button {
   flex-basis: 125px;
   height: 45px;
 }
-
 
 .editor .items-area {
   position: relative;
@@ -224,31 +220,27 @@ button#create {
   border-radius: 20px;
 }
 
+
 /* quiz */
 
 .item-card-wrapper {
   perspective: 1000px;
-  width: 400px;
+  width: 300px;
 }
-
 
 .item-card-wrapper .item-card {
   width: inherit;
   height: 250px;
-
   text-align: center;
   margin: 0 auto;
-
   border-radius: 25px;
   border-style: solid;
   border-width: 2px;
   border-color: #8366FD;
   background-color: white;
-  
   transition-duration: .45s;
   transform-style: preserve-3d; 
 }
-
 
 .front, .back {
   backface-visibility: hidden;
@@ -257,7 +249,6 @@ button#create {
   position: absolute;
   top: 0;
   left: 0;
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -278,13 +269,12 @@ button#create {
 }
 
 .item-card-wrapper button {
-  width: 150px;
+  width: 125px;
 }
  
 .turn {
   transform: rotateY(180deg);
 }
-
 
 @media screen and (min-width: 768px) {
  
@@ -297,11 +287,19 @@ button#create {
 }
 
 @media screen and (min-width: 1024px) {
- 
   .editor button#add {
     position: absolute;
     bottom: 20px;
     right: 30px; 
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .item-card-wrapper {
+    width: 400px;
+  }
+  .item-card-wrapper button {
+    width: 150px;
   }
 }
 

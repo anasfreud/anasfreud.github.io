@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
   let collections = [];
+  collections = JSON.parse(localStorage.getItem('collections'));
   let collectionName = localStorage.getItem('focusCollection');
   let editableCollection = {
     title: "",
@@ -24,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   if (collectionName != '') {
-    collections = JSON.parse(localStorage.getItem('collections'));
     // find collection in collections list
     collections.forEach((collection) => {
       if (collection.title == collectionName) {

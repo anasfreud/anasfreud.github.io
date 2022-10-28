@@ -8,16 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     description: 'Here will be your description',
   };
   let collectionsCount = 0;
+
+  getCollections();
   
   createBtn.addEventListener('click', () => {
     collectionsCount++;
-    createCollection(sampleStrings.title + " #" + collectionsCount , sampleStrings.description);
-    saveCollection(sampleStrings.title + " #" + collectionsCount, sampleStrings.description);
+    localStorage.setItem('focusCollection', "");
+    location.href = "editor.html";
   });
   
-  getCollections();
-
-
   function getCollections() {
     const collectionsArray = JSON.parse(localStorage.getItem('collections'));
     if (collectionsArray != null) {
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     collection.classList.add('collection', 'panel');
     collection.innerHTML = `
       <div class="title">${title}</div>
-      <div class="description">${description}</div>
+      <div class="description"><p>${description}</p></div>
       <div class="buttons">
         <button class="button-dark" data-title="${title}">Edit</button>
         <button class="button-light" data-title="${title}">Train</button>
@@ -44,39 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const buttons = collection.querySelectorAll('button');
     buttons[0].addEventListener('click', (event) => {
-      localStorage.setItem('focusCollection', event.target.dataset.title)
+      localStorage.setItem('focusCollection', event.target.dataset.title);
       location.href = "editor.html";
     });
     
     buttons[1].addEventListener('click', (event) => {
-      localStorage.setItem('focusCollection', event.target.dataset.title)
+      localStorage.setItem('focusCollection', event.target.dataset.title);
       location.href = "quiz.html";
     });
 
   }
-
-  function saveCollection(title, description) {
-    
-    const collectionObj = {
-      title: title,
-      description: description,
-      items: [
-        {
-          key: "Word",
-          value: "Слово"
-        }
-      ],
-    };
-
-    let collectionsArray = JSON.parse(localStorage.getItem('collections'));
-    if (collectionsArray == null) {
-      localStorage.setItem('collections', JSON.stringify([]));
-      collectionsArray = [];
-
-    } 
-    collectionsArray.push(collectionObj);
-    localStorage.setItem('collections', JSON.stringify(collectionsArray));
-  }
-
 });
 

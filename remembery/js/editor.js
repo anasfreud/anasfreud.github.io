@@ -1,4 +1,3 @@
-'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelector('.items'),
@@ -14,25 +13,50 @@ document.addEventListener('DOMContentLoaded', () => {
         
   const collections = JSON.parse(localStorage.getItem('collections'));
   let collectionName = localStorage.getItem('focusCollection');
-  let editableCollection;
+  let editableCollection = {
+    title: "",
+    description: "",
+    items: [
+      {
+        key: "Word",
+        value: "Слово",
+      }
+    ],
+  };
   
-  // find collection in collections list
-  collections.forEach((collection) => {
-    if (collection.title == collectionName) {
-      editableCollection =  collection;
-    }
-  });
-
+  if (collectionName != "") {
+    // find collection in collections list
+    collections.forEach((collection) => {
+      if (collection.title == collectionName) {
+        editableCollection =  collection;
+      }
+    });
+  } else {
+    collections.push(editableCollection);
+  }
 
   //fill inputs
   titleInput.value = editableCollection.title;
   descriptionInput.value = editableCollection.description;
 
   // show all items
-  fetchItems();
+  fetchItems(); 
+
+  titleInput.addEventListener('focusout', () => {
+    if (!isTitleUnique(titleInput.value)) {
+      warning.textContent = 'Title must be unique';
+    } else {
+      warning.textContent = "";
+    }
+  });
 
   saveBtn.addEventListener('click', () => {
-    
+    if (titleInput.value == "") {
+      location.href = '#title';
+      warning.textContent = 'Title must not be empty';
+      return;
+    }
+
     if (!isTitleUnique(titleInput.value)) {
       location.href = '#title';
       warning.textContent = 'Title must be unique';
@@ -52,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   deleteBtn.addEventListener('click', () => {
+    //are you sure?
     deleteCollection();
     localStorage.setItem('collections', JSON.stringify(collections));
     location.href = "index.html";
   });
-
 
 
 
@@ -74,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <input class="mb-2 mb-md-0" type="text" value="${key}">
       <input type="text" value="${value}">
     </div>
-    <button class="delete-item"><img src="images/cross.png"></button>
+    <button tabindex="-1" class="delete-item"><img src="images/cross.png"></button>
   </div>
     `;
     cards.append(card);

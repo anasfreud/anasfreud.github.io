@@ -75,8 +75,10 @@ button#create {
 }
 
 .collection .description {
+  width: 380px;
   color: #868686;
   font-size: 20px;
+  word-wrap: break-word;
 }
 
 .collection .buttons {
@@ -144,13 +146,15 @@ button#create {
 
 .editor input#title {
   width: 100%;
-  border-radius: 52px;
+  border-radius: 20px;
   flex-basis: 60px;
   font-size: 1.3em;
 }
 
 .editor #warning {
   color: rgb(245, 67, 67);
+  height: 20px;
+  transition-duration: 1s;
 }
 
 .editor textarea#description {

@@ -36,7 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     flippers[previous(offset)].classList.remove('turn');
     currentItem++;
 
+
     if (currentItem < items.length) {
+
+
+      if (items.length - currentItem < cardsCount) {
+
+      }
 
       setText(next(offset + 1), items[currentItem].key, items[currentItem].value);
       setText(next(offset), "", "");

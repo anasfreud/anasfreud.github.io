@@ -11,31 +11,44 @@
   <title>Remembery</title>
   <script defer src="js/quiz.js"></script>
 </head>
-<body>
 
+<body>
   <nav class="d-flex flex-row flex-nowrap justify-content-center align-items-center">
     <div class="menu-inactive"><a href="about.html">About</a></div>
     <div class="menu-active"><a href="index.html">Dashboard</a></div>
   </nav>
 
-
-  <div class="item-card-wrapper d-flex flex-column justify-content-start align-items-center mx-auto">
-    <div class="item-card">
-
-        <!-- back and front -->
-        <div class="front"> <div>Front</div> </div>
-        <div class="back"> <div>Back</div> </div>
-      
+  <div class="item-cards-area">
+    <div class="item-card item-card-none">
+      <div class="content">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
     </div>
-
-    <div class="d-flex flex-row justify-content-around align-self-stretch mt-5">
-      <button class="button-dark">Turn</button>
-      <button class="button-light">Next</button>
+    <div class="item-card item-card-last">
+      <div class="content">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
     </div>
-    
+    <div class="item-card item-card-mid">
+      <div class="content">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+    </div>
+    <div class="item-card item-card-first">
+      <div class="content">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+    </div>
   </div>
   
-
-
+  <div class="d-flex flex-row justify-content-between align-self-center mx-auto quiz-buttons">
+    <button class="button-dark">Turn</button>
+    <button class="button-light">Next</button>
+  </div>
+  
 </body>
 </html>

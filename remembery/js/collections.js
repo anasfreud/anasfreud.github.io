@@ -1,5 +1,3 @@
-'use strict';
-
 document.addEventListener('DOMContentLoaded', () => {
   const createBtn = document.querySelector('button#create'),
         collectionCreator = document.querySelector('.collection#create'),
@@ -62,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const collectionObj = {
       title: title,
       description: description,
-      items: [],
+      items: [
+        {
+          key: "Word",
+          value: "Слово"
+        }
+      ],
     };
 
     let collectionsArray = JSON.parse(localStorage.getItem('collections'));

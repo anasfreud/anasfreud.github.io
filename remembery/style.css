@@ -221,38 +221,58 @@ button#create {
 }
 
 
+
+
 /* quiz */
 
-.item-card-wrapper {
-  perspective: 1000px;
-  width: 300px;
+.item-cards-area {
+  height: 400px;
+  width: 300px; 
+  position: relative;
+  margin: 0 auto;
 }
 
-.item-card-wrapper .item-card {
-  width: inherit;
-  height: 250px;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 25px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #8366FD;
-  background-color: white;
+.item-card {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+   
+  animation-duration: .6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  perspective: 1000px;
+}
+
+
+.item-card .content {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  
   transition-duration: .45s;
   transform-style: preserve-3d; 
+  
+  text-align: center;
+  background-color: white;
+  border: 2px solid #8366FD;
+  border-radius: 25px;
 }
 
 .front, .back {
-  backface-visibility: hidden;
-  width: inherit;
-  height: inherit;
   position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
   top: 0;
   left: 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  font-size: 2.5em;
 
 }
 
@@ -264,17 +284,20 @@ button#create {
   transform: rotateY(180deg);
 } 
 
-.front div, .back div {
-  font-size: 2.5em;
+.quiz-buttons {
+  width: 300px;
 }
 
-.item-card-wrapper button {
+.quiz-buttons  button{
   width: 125px;
 }
  
 .turn {
   transform: rotateY(180deg);
 }
+
+
+
 
 @media screen and (min-width: 768px) {
  
@@ -295,11 +318,11 @@ button#create {
 }
 
 @media screen and (min-width: 425px) {
-  .item-card-wrapper {
+  .item-cards-area {
     width: 400px;
   }
-  .item-card-wrapper button {
-    width: 150px;
+  .quiz-buttons {
+    width: 400px;
   }
 }
 
@@ -309,3 +332,99 @@ button#create {
   font-style: normal; 
   font-weight: normal; 
 } 
+
+
+/* card-conditions */
+
+@keyframes card-last {
+  from {
+    top: 0;
+    opacity: 0;
+    transform: scale(0.85, 0.85);
+    z-index: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 0.4;
+    transform: scale(0.9, 0.9);
+    z-index: 1;
+  }
+}
+
+@keyframes card-mid {
+  from {
+    top: 20px;
+    opacity: 0.4;
+    transform: scale(0.9, 0.9);
+    z-index: 1;
+  }
+  to {
+    top: 40px;
+    opacity: 0.6;
+    transform: scale(0.95, 0.95);
+    z-index: 2;
+  }
+}
+
+@keyframes card-first {
+  from {
+    top: 40px;
+    opacity: 0.6;
+    transform: scale(0.95, 0.95);
+    z-index: 2;
+  }
+  to {
+    top: 60px;
+    opacity: 1;
+    transform: scale(1, 1);
+    z-index: 3;
+  }
+}
+
+@keyframes card-none {
+  from {
+    top: 60px;
+    opacity: 1;
+    transform: scale(1, 1);
+    z-index: 3;
+  }
+  50% {
+    top: 80px;
+    opacity: 0;
+    transform: scale(0.85 0.85);
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+    transform: scale(0.85, 0.85);
+    z-index: 0;
+  }
+}
+
+.item-card-none {
+  top: 0;
+  opacity: 0;
+  transform: scale(0.85, 0.85);
+  z-index: 0;
+}
+
+.item-card-last {
+  top: 20px;
+  opacity: 0.4;
+  transform: scale(0.9, 0.9);
+  z-index: 1;
+}
+
+.item-card-mid {
+  top: 40px;
+  opacity: 0.6;
+  transform: scale(0.95, 0.95);
+  z-index: 2;
+}
+
+.item-card-first {
+  top: 60px;
+  opacity: 1;
+  transform: scale(1, 1);
+  z-index: 3;
+}

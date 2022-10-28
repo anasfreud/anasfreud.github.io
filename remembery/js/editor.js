@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
   };
   
-  if (collectionName != "") {
+  if (collectionName != '') {
+    collections = JSON.parse(localStorage.getItem('collections'));
     // find collection in collections list
     collections.forEach((collection) => {
       if (collection.title == collectionName) {
-        editableCollection =  collection;
+        editableCollection = collection;
       }
     });
   } else {

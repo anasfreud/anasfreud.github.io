@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         warning = document.querySelector('#warning');
         
 
-        
-  const collections = JSON.parse(localStorage.getItem('collections'));
+  let collections = [];
   let collectionName = localStorage.getItem('focusCollection');
   let editableCollection = {
     title: "",

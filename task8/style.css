@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color:rgb(50, 50, 50);
+}
+
+.text {
+    width: 800px;
+}
+
+.text p {
+    font-size: 2em;
+    color: white;
+}
+
+.form-wrapper {
+    position: absolute;
+    margin: 0 auto;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    padding: 10px;
+    
+    animation-duration: .6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+form {
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid rgb(100, 100, 100);
+    background-color: rgb(225, 223, 223);
+}
+
+textarea {
+    resize: none;
+}
+
+.msg-sucess {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: rgb(132, 223, 146);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    animation-name: message;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.msg-failure {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: rgb(223, 132, 132);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+
+    
+    animation-name: message;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@media screen and (min-width: 600px) {
+    .form-wrapper {
+        width: 600px;
+    }
+}
+
+@keyframes show-form {
+    from {
+        top: 0px;
+        opacity: 0%;
+    }
+    to {
+        top: 40px;
+        opacity: 100%;
+    }
+}
+
+@keyframes hide-form {
+    from {
+        top: 40px;
+        opacity: 100%;
+    }
+    to {
+        top: 0px;
+        opacity: 0%;
+    }
+}
+
+@keyframes message {
+    0% {
+        bottom: 0px;
+        opacity: 0%;
+    }
+    30% {
+        bottom: 20px;
+        opacity: 100%;
+    }
+    70% {
+        bottom: 20px;
+        opacity: 100%;
+    }
+    100% {
+        bottom: 30px;
+        opacity: 0%;
+    }
+    
+}

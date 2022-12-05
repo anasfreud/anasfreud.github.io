@@ -5,7 +5,8 @@ body {
 }
 
 .text {
-    width: 800px;
+    width: 100%;
+    padding: 20px;
 }
 
 .text p {

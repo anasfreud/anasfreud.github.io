@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: formData.get('message'),
       agreement: formData.get('agreement'),
     };
-    fetch('ttps://api.slapform.com/TPDxT6kZwI', {
+    fetch('https://api.slapform.com/TPDxT6kZwI', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

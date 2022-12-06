@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sucess: 'Данные были успешно отправлены',
     failure: 'Возникла ошибка: ',
   };
-  const fields = ['name', 'email', 'message', 'agreement'];
+  const fields = ['name', 'email', 'message'];
         
   // скрываем форму, если передвигаемся назад по истории
   window.addEventListener('popstate', () => {
@@ -47,16 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
   formBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (!inputs[inputs.length - 1].checked) {
+      showFailure("Вы должны согласиться с политикой обработки персональных данных", "");
       return;
     }
     const formData = new FormData(form);
     let data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      message: formData.get('message'),
-      agreement: formData.get('agreement'),
+      message: formData.get('message')
     };
-    fetch('https://api.slapform.com/TPDxT6kZwI', {
+    fetch('https://api.slapform.com/TRbOYlvd0n', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(json);
         showSucces();
       })
-      .catch((err) => showFailure(err));
+      .catch((err) => showFailure(Strings.failure, err));
 
   });
 
@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // показать сообщение об ошибке
-  function showFailure(err) {
+  function showFailure(failure, err) {
     let msg = document.createElement('div');
-    msg.textContent = strings.failure + err;
+    msg.textContent = failure + err;
     msg.classList.add('msg-failure');
     document.body.append(msg);
     setTimeout(() => {
@@ -102,13 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const value = localStorage.getItem(fields[i]);
       if (value != null) {
         inputs[i].value = value;
-        if (fields[i] == 'agreement') {
-          if (value == 'true') {
-            inputs[i].checked = true;
-          } else {
-            inputs[i].checked = false;
-          }
-        }
       }
     }
   }

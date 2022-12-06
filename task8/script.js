@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // отправка данных на сервер
   formBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    if (!inputs[inputs.length - 1].checked) {
+      return;
+    }
     const formData = new FormData(form);
     let data = {
       name: formData.get('name'),

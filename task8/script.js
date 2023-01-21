@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       email: formData.get('email'),
       message: formData.get('message')
     };
-    fetch('https://api.slapform.com/TRbOYlvd0n', {
+    fetch('https://formcarry.com/s/NDosF_UEHQ', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
